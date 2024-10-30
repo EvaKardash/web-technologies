@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk"> <!-- Вказує, що мова документа – українська -->
+
+<head>
+  <meta charset="UTF-8"> <!-- Встановлює кодування символів UTF-8 для коректного відображення тексту -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Дозволяє адаптувати сторінку до ширини екрану пристрою -->
+  <title>Document</title> <!-- Назва сторінки, яка відображається у вкладці браузера -->
+</head>
+
+<body>
+<form action="action_page.html" method="post" enctype="multipart/form-data">
+  <!-- Форма, яка надсилає дані методом POST на сторінку action_page.html і дозволяє завантаження файлів -->
+
+  <fieldset>
+    <legend>
+      <h1>Форма для заповнення</h1> <!-- Заголовок основного блоку форми -->
+    </legend>
+
+    <fieldset>
+      <legend>Особисті дані</legend> <!-- Заголовок блоку з особистими даними -->
+
+      <label for="name">Ім'я</label> <!-- Поле для введення імені користувача -->
+      <input tabindex="3" type="text" name="name" id="name" placeholder="Введіть ім'я" pattern="[A-Za-z][^0-9]{6,}">
+      <!-- Поле введення тексту з обмеженням у вигляді шаблону, що дозволяє тільки літери, мінімум 6 символів -->
+
+      <br><br>
+
+      <label for="password">Пароль</label> <!-- Поле для введення пароля користувача -->
+      <input type="password" name="password" id="password" placeholder="Введіть пароль">
+      <br><br>
+
+      <label for="date">День народження</label> <!-- Поле для введення дати народження -->
+      <input type="date" name="date" id="date">
+      <br><br>
+
+      <label for="photo">Завантажте своє Аудіо</label> <!-- Поле для завантаження файлу аудіо -->
+      <input accept="audio/*" multiple type="file" name="file" id="file"> <!-- Дозволяє завантажити кілька аудіофайлів -->
+      <br><br>
+
+      <div>
+        <p>Розкажіть про себе:</p>
+        <textarea name="" id=""></textarea> <!-- Текстова область для введення інформації про себе -->
+      </div><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Контакти</legend> <!-- Заголовок блоку з контактними даними -->
+
+      <label for="email">Введіть свій Email:</label> <!-- Поле для введення електронної пошти -->
+      <input type="email" name="email" id="email" placeholder="Введіть свій Email" required>
+      <br><br>
+
+      <label for="number">Введіть свій номер:</label> <!-- Поле для введення номера телефону -->
+      <input type="number" name="number" id="number" placeholder="Введіть свій номер" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Загальні дані</legend> <!-- Заголовок блоку з загальними даними -->
+
+      <div>
+        <label for="continent">Континент</label>
+        <select name="continent" id="continent">
+          <option value="">Євразія</option> <!-- Варіанти вибору континенту -->
+          <option value="">Північна Америка</option>
+          <option selected value="">Південна Америка</option> <!-- Опція за замовчуванням -->
+          <option value="">Африка</option>
+          <option value="">Австралія</option>
+          <option value="">Антарктида</option>
+        </select>
+      </div>
+      <br><br><br><br>
+
+      <div>
+        <label for="language">Знання мов:</label>
+        <select name="language" id="language" multiple size="3"> <!-- Поле вибору мов з можливістю вибору кількох -->
+          <option value="language">Англійська</option>
+          <option value="language">Українська</option>
+          <option value="language">Німецька</option>
+          <option value="language">Французька</option>
+        </select>
+      </div>
+      <br><br>
+
+      <div>
+        <label for="continent">Громадянство</label>
+        <select name="continent" id="continent"> <!-- Поле вибору громадянства з групами опцій -->
+          <optgroup label="Європа">
+            <option value="continent">Українське</option>
+            <option value="continent">Англійське</option>
+          </optgroup>
+          <optgroup label="Антарктида">
+            <option value="continent">Стандарт</option>
+          </optgroup>
+          <optgroup label="Азія">
+            <option value="continent">Турецька</option>
+            <option value="continent">Японська</option>
+            <option value="continent">Китайська</option>
+          </optgroup>
+        </select>
+      </div>
+    </fieldset>
+
+    <!-- Нижній колонтитул з підписом автора -->
+    <footer>
+      <p align="center"><mark>Made by Kardash Evelina &copy;</mark></p>
+    </footer>
+  </fieldset>
+</form>
+</body>
+</html>
