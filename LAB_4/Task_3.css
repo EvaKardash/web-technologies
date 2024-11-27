@@ -1,0 +1,34 @@
+/* Встановлює зелений колір для всіх посилань */
+a {
+  color: green;
+}
+
+/* Прибирає стандартні маркери зі вкладених списків (ul li ul) */
+ul li ul {
+  list-style-type: none;
+}
+
+/* Задає фіолетовий колір для елементів списку з класом "nested-list-list" */
+.nested-list-list {
+  color: purple;
+}
+
+/* Встановлює квадратні маркери для елементів списку з класом "square-bullet" */
+.square-bullet {
+  list-style-type: square;
+}
+
+/* Використовує спеціальне зображення як маркер для елементів списку з класом "marked-bullet" */
+.marked-bullet {
+  list-style-image: url("../materials/li.svg");
+}
+
+/* Вимикає підкреслення для посилань всередині елементів списку з класом "square-bullet" */
+.square-bullet li a {
+  text-decoration: none;
+}
+
+/* Встановлює розташування нумерації всередині списків (ol) */
+ol {
+  list-style-position: inside;
+}

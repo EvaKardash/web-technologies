@@ -1,0 +1,54 @@
+/* Задає шрифт Arial з резервним serif для всіх елементів,
+   встановлює розмір шрифту 20px і проміжок між словами 40px */
+* {
+  font-family: Arial, serif;
+  font-size: 20px;
+  word-spacing: 40px;
+}
+
+/* Задає зелений колір тексту і вирівнювання по центру для всіх параграфів */
+p {
+  color: green;
+  text-align: center;
+}
+
+/* Задає вирівнювання по ширині для всіх div елементів */
+div {
+  text-align: justify;
+}
+
+/* Клас для параграфів з червоним кольором тексту */
+.colored-paragraph {
+  color: red;
+}
+
+/* Клас для запобігання переносу тексту в межах елемента */
+.no-transfer {
+  white-space: nowrap;
+}
+
+/* Клас для додавання тіні до тексту: відступ 5px по X і -5px по Y,
+   розмиття 3px, колір тіні - рожевий */
+.text-shadow {
+  text-shadow: 5px -5px 3px rgba(255, 80, 130, 1);
+}
+
+/* Клас для перетворення тексту на великі літери, перекреслення тексту
+   і додавання відступу першого рядка на 50px */
+.crossed-uppercase {
+  text-decoration: line-through;
+  text-transform: uppercase;
+  text-indent: 50px;
+}
+
+/* Клас для збільшення проміжків між словами на 50px та між літерами на 30px */
+.word-intervals {
+  word-spacing: 50px;
+  letter-spacing: 30px;
+}
+
+/* Ідентифікатор для параграфа "paragraph2", задає напівжирний і курсивний стиль */
+#paragraph2 {
+  font-weight: bold;
+  font-style: italic;
+}
