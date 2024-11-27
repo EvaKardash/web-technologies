@@ -1,0 +1,77 @@
+* {
+  background-color: #cdc9c9;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+
+input, select, textarea {
+  background-color: #E9ECEF;
+  border: 1px solid #CED4DA;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input:hover, select:hover, textarea:hover {
+  background-color: #a6b8dc;
+  border-color: #7394ca;
+}
+
+fieldset {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #CED4DA;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+legend {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 5px 0;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  padding: 5px;
+}
+
+button {
+  background-color:  #003366;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7ba4cd;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+header {
+  margin-left: 50%;
+  color: #003366;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  font-size: 50px;
+  border-radius: 10px;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="Task_3.css">
+</head>
+<body>
+
+
+<header>
+  <h1>Анкета</h1>
+</header>
+
+<main>
+  <form action="" method="post" enctype="multipart/form-data">
+    <fieldset tabindex="1">
+      <legend>Особиста інформація</legend>
+
+      <p>Ім'я</p>
+      <label for="name">
+        <input id="name" type="text" name="name" placeholder="Введіть ім'я..." minlength="1" maxlength="50" required>
+      </label>
+      <br>
+
+      <p>Прізвище</p>
+      <label for="surname">
+        <input id="surname" type="text" name="surname" placeholder="Введіть прізвище..." minlength="1" maxlength="50" required>
+      </label>
+      <br>
+
+      <p>Дата народження</p>
+      <label for="date">
+        <input id="date" type="date" name="birth_date" required>
+      </label>
+      <br>
+
+      <p>Стать</p>
+      <label for="sex_male">
+        <input id="sex_male" type="radio" name="sex" value="male"> Чоловіча
+      </label>
+      <br>
+      <label for="sex_female">
+        <input id="sex_female" type="radio" name="sex" value="female"> Жіноча
+      </label>
+      <br>
+      <label for="sex_other">
+        <input id="sex_other" type="radio" name="sex" value="other" checked> Інша
+      </label>
+    </fieldset>
+    <br>
+
+    <fieldset tabindex="2">
+      <legend>Придумайте пароль</legend>
+      <p>Пароль повинен містити 6 символів, принаймні одну велику та малу літеру й одну цифру</p>
+      <label for="password">
+        <input id="password" type="password" name="password" placeholder="Введіть пароль" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset tabindex="3">
+      <legend>Контактна інформація</legend>
+
+      <p>Електронна адреса</p>
+      <label for="email">
+        <input id="email" type="email" name="email" placeholder="email@gmail.com" pattern="[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off" required>
+      </label>
+      <br>
+
+      <p>Номер мобільного</p>
+      <label for="phone">
+        <input id="phone" type="tel" name="phone" placeholder="+38 000 000 00 00" pattern="\+38\s\d{3}\s\d{3}\s\d{2}\s\d{2}" required>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset tabindex="4">
+      <legend>Освіта</legend>
+      <label for="edu_bac">
+        <input id="edu_bac" type="radio" name="education" value="bachelor"> Бакалавр
+      </label>
+      <br>
+      <label for="edu_mas">
+        <input id="edu_mas" type="radio" name="education" value="master"> Магістр
+      </label>
+      <br>
+      <label for="edu_sch">
+        <input id="edu_sch" type="radio" name="education" value="school"> Навчаюсь в школі
+      </label>
+      <br>
+      <label for="edu_nothing">
+        <input id="edu_nothing" type="radio" name="education" value="nothing"> Не навчаюсь
+      </label>
+    </fieldset>
+
+    <fieldset tabindex="5">
+      <legend>Ваше хобі</legend>
+      <label for="hobby_sport">
+        <input id="hobby_sport" type="checkbox" name="hobby" value="sport"> Спорт
+      </label><br>
+      <label for="hobby_music">
+        <input id="hobby_music" type="checkbox" name="hobby" value="music"> Музика
+      </label><br>
+      <label for="hobby_travel">
+        <input id="hobby_travel" type="checkbox" name="hobby" value="travel"> Подорожі
+      </label><br>
+      <label for="hobby_reading">
+        <input checked disabled id="hobby_reading" type="checkbox" name="hobby" value="reading"> Читання
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset tabindex="6">
+      <legend>Трошки географії...</legend>
+      <p>Оберіть своє місто</p>
+      <label for="city">
+        <select id="city" name="city">
+          <option value="Kyiv">Київ</option>
+          <option value="Lviv">Львів</option>
+          <option value="Khust" selected>Хуст</option>
+          <option value="Odesa">Одеса</option>
+          <option value="Dnipro">Дніпро</option>
+        </select>
+      </label>
+
+      <br>
+
+      <p>Оберіть країну для поїздки</p>
+      <label for="country">
+        <select id="country" name="country">
+
+          <optgroup label="Європа">
+            <option value="spain">Іспанія</option>
+            <option value="germany">Німеччина</option>
+            <option value="italy">Італія</option>
+          </optgroup>
+
+          <optgroup label="Азія">
+            <option value="china">Китай</option>
+            <option value="japan">Японія</option>
+            <option value="india">Індія</option>
+          </optgroup>
+
+          <optgroup label="Африка">
+            <option value="egypt">Єгипет</option>
+            <option value="morocco">Марокко</option>
+            <option value="south_africa">ПАР</option>
+          </optgroup>
+
+          <optgroup label="Північна Америка">
+            <option value="USA">США</option>
+            <option value="canada">Канада</option>
+            <option value="mexico">Мексика</option>
+          </optgroup>
+        </select>
+
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset tabindex="7">
+      <legend>Оберіть ваші улюблені жанри музики</legend>
+      <label for="genres">
+        <select id="genres" name="genres" multiple>
+          <option value="rock">Рок</option>
+          <option value="pop">Поп</option>
+          <option value="jazz">Джаз</option>
+          <option value="classical">Класика</option>
+          <option value="electronic">Електронна</option>
+          <option value="hiphop">Хіп-хоп</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset tabindex="8">
+      <legend>Виберіть улюблений фільм</legend>
+
+      <label for="movie">
+        <input list="movie_options" name="movie" id="movie" placeholder="Оберіть назву фільму">
+        <datalist id="movie_options">
+          <option value="Месники"></option>
+          <option value="Гаррі Поттер"></option>
+          <option value="Дедпул і Росомаха"></option>
+          <option value="Зелена миля"></option>
+        </datalist>
+      </label>
+
+      <br>
+      ...            <label for="other_movie">
+      <p>Якщо вашого фільму немає у списку, напишіть його тут:</p>
+      <textarea id="other_movie" name="other_movie" rows="3" cols="40" placeholder="Введіт
+
+
+<fieldset tabindex="8">
+      <legend>Виберіть улюблений фільм</legend>
+
+      <label for="movie">
+        <input list="movie_options" name="movie" id="movie" placeholder="Оберіть назву фільму">
+        <datalist id="movie_options">
+          <option value="Месники"></option>
+          <option value="Гаррі Поттер"></option>
+          <option value="Дедпул і Росомаха"></option>
+          <option value="Зелена миля"></option>
+        </datalist>
+      </label>
+
+      <br>
+
+      <label for="other_movie">
+        <p>Якщо вашого фільму немає у списку, напишіть його тут:</p>
+        <textarea id="other_movie" name="other_movie" rows="3" cols="40" placeholder="Введіть назву фільму..."></textarea>
+      </label>
+    </fieldset>
+
+    <br>
+
+    <fieldset tabindex="9">
+      <legend>Завантажте аудіофайли</legend>
+      <label for="audioUpload">
+        <input id="audioUpload" type="file" name="audio_files" accept="audio/*" multiple >
+      </label>
+    </fieldset>
+
+    <br>
+    <div class="buttons">
+      <button type="submit">Відправити</button>
+      <button type="reset">Скинути</button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+  </form>
+</main>
+
+
+</body>
+</html>
+
