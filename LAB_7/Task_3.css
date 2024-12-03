@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('cloud.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.form-container {
+  width: 620px;
+  border: 20px solid #868686;
+  background: url('cloud.png');
+  padding: 0 20px 20px;
+  position: relative;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 25px;
+  color: #7d21b3;
+  font-weight: 700;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.form-title::first-letter {
+  font-size: 50px;
+  color: pink;
+}
+
+.form-title::before,
+.form-title::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background: #7d21b3;
+  width: 40%;
+  top: 30px;
+}
+
+.form-title::before {
+  left: 0;
+}
+
+.form-title::after {
+  right: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  display: block;
+  width: 250px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-left: 10px;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  width: 540px;
+  height: 46px;
+  resize: none;
+  padding: 5px;
+}
+
+input:hover,
+textarea:hover {
+  border-bottom: 4px solid #fbff00;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 4px solid #ffa600;
+  outline: none;
+}
+
+input[type="password"]:hover {
+  border-bottom: 4px solid #1eff00;
+}
+
+input[type="password"]:focus {
+  border-bottom: 4px solid #00ffea;
+}
+
+textarea::first-line {
+  color: red;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  width: 130px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid;
+}
+
+.reset-button {
+  color: #e64a19;
+  border-color: #e64a19;
+  background-color: white;
+}
+
+.reset-button:hover {
+  color: white;
+  background-color: #e64a19;
+  border-radius: 25px;
+}
+
+.submit-button {
+  color: #0097a7;
+  border-color: #0097a7;
+  background-color: white;
+}
+
+.submit-button:hover {
+  color: white;
+  background-color: #0097a7;
+  border-radius: 25px;
+}

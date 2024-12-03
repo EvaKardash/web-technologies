@@ -1,0 +1,97 @@
+/* Загальні стилі для сторінки */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d3d3d3; /* Сірий фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Головний контейнер для віджета */
+.weather-widget {
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тінь навколо блоку */
+}
+
+/* Верхній блок із погодою */
+.current-weather {
+  position: relative;
+  height: 250px;
+}
+
+/* Чорний блок */
+.black-block {
+  background: black; /* Чорний фон */
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Дата */
+.black-block .date {
+  font-size: 100px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  left: 20px;
+}
+
+/* Іконка хмари */
+.weather-icon {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  opacity: 0.8; /* Прозорість іконки */
+}
+
+/* Стрілки */
+.arrows {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+}
+
+.arrow {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7); /* Прозорий білий фон */
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тінь */
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Нижній сірий блок */
+.gray-block {
+  background: #f4f4f4; /* Сірий фон */
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Тінь зверху */
+}
+
+/* Кожен день у сірому блоці */
+.day {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.day span:last-child {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}

@@ -1,0 +1,84 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.block {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Стилі для блоків 1.1 та 1.2 */
+.block-1-1 {
+  background-color: #4caf50;
+  color: white;
+  width: 80px;
+  height: 40px;
+  bottom: 10px;
+  left: 10px;
+}
+
+.block-1-2 {
+  background-color: #4caf50;
+  color: white;
+  width: 80px;
+  height: 40px;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Стилі для блоків 2.1 та 2.2 */
+.block-2-1, .block-2-2 {
+  background-color: #2196f3;
+  color: white;
+  width: 150px;
+  height: 100px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Забороняє взаємодію з прихованими блоками */
+}
+
+.block-2-1 {
+  bottom: 60px;
+  right: 10px;
+}
+
+.block-2-2 {
+  bottom: 60px;
+  left: 10px;
+}
+
+/* Взаємодія через :hover */
+.block-1-1:hover ~ .block-2-2 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.block-1-2:hover ~ .block-2-1 {
+  opacity: 1;
+  pointer-events: auto;
+}

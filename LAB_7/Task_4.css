@@ -1,0 +1,101 @@
+/* Загальні стилі */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Горизонтальна навігація */
+.horizontal-nav {
+  position: sticky;
+  top: 0;
+  background-color: #444;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+.horizontal-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.horizontal-nav li {
+  margin-right: 20px;
+}
+
+.horizontal-nav li a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.horizontal-nav li:hover {
+  background-color: #555;
+}
+
+.horizontal-nav .active {
+  background-color: #4CAF50;
+}
+
+.horizontal-nav .float-right {
+  margin-left: auto;
+}
+
+/* Вертикальна навігація */
+.vertical-nav {
+  position: fixed;
+  top: 50px; /* Зсунули панель вниз */
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 50px); /* Регулюємо висоту, враховуючи зсув */
+  background-color: #0056b3;
+  color: white;
+  padding-top: 20px;
+}
+
+.vertical-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-nav li {
+  position: relative;
+}
+
+.vertical-nav li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  font-size: 18px;
+}
+
+.vertical-nav li:hover {
+  background-color: #0073e6;
+}
+
+.vertical-nav ul ul {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #003d73;
+}
+
+.vertical-nav ul li:hover > ul {
+  display: block;
+}
+
+.vertical-nav ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+.material-icons {
+  vertical-align: middle;
+  margin-right: 10px;
+}
