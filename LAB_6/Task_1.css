@@ -1,0 +1,101 @@
+/* Загальні стилі */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Шапка */
+.header {
+  background-color: #6c757d;
+  color: white;
+  padding: 1rem;
+}
+
+.profile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.task-list-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.task-list-item a:hover {
+  text-decoration: underline;
+}
+
+/* Основний контент */
+.article-list {
+  padding: 1.5rem;
+  list-style: none;
+}
+
+.article-list-item {
+  margin-bottom: 2rem;
+}
+
+.article {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+
+.article p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Зображення */
+.article-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-img-right {
+  float: right;
+  max-width: 50%;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Прибираємо флоати */
+.article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
