@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лампочка, Світлофор, Годинник, Таймер та Магазин</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+    #clock, #countdown, #birthdayCountdown {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    .lamp {
+      width: 100px;
+      height: 150px;
+      background-color: gray;
+      border-radius: 50%;
+      margin: 20px auto;
+      transition: background-color 0.3s;
+    }
+    .on {
+      background-color: yellow;
+    }
+    .traffic-light {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .light {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 5px;
+      background-color: gray;
+      transition: background-color 0.5s;
+    }
+    .task-section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Вибір завдання -->
+<h1>Виберіть завдання</h1>
+<select id="taskSelector">
+  <option value="clockSection">Цифровий годинник</option>
+  <option value="timerSection">Таймер зворотного відліку</option>
+  <option value="birthdaySection">Відлік до дня народження</option>
+  <option value="lampSection">Лампочка</option>
+  <option value="trafficSection">Світлофор</option>
+  <option value="storeSection">Магазин продуктів</option>
+</select>
+<button onclick="showSelectedTask()">Запустити завдання</button>
+
+<!-- Цифровий годинник -->
+<div id="clockSection" class="task-section">
+  <div id="clock"></div>
+</div>
+
+<!-- Таймер зворотного відліку -->
+<div id="timerSection" class="task-section">
+  <h2>Таймер зворотного відліку</h2>
+  <input type="datetime-local" id="timerInput">
+  <button id="startTimer">Почати відлік</button>
+  <div id="countdown"></div>
+</div>
+
+<!-- Відлік до дня народження -->
+<div id="birthdaySection" class="task-section">
+  <h2>Відлік до дня народження</h2>
+  <label for="calendar">Оберіть місяць і день:</label>
+  <input type="month" id="calendar">
+  <button id="setBirthday">Встановити дату</button>
+  <div id="birthdayCountdown"></div>
+</div>
+
+<!-- Управління лампочкою -->
+<div id="lampSection" class="task-section">
+  <h1>Управління лампочкою</h1>
+  <div id="lamp" class="lamp"></div>
+  <button id="toggle">Включити</button>
+  <button id="changeType">Змінити тип лампочки</button>
+  <button id="setBrightness">Змінити яскравість</button>
+</div>
+
+<!-- Світлофор -->
+<div id="trafficSection" class="task-section">
+  <h1>Світлофор</h1>
+  <div class="traffic-light">
+    <div id="red" class="light"></div>
+    <div id="yellow" class="light"></div>
+    <div id="green" class="light"></div>
+  </div>
+  <button id="nextState">Наступний стан</button>
+</div>
+
+<!-- Магазин продуктів -->
+<div id="storeSection" class="task-section">
+  <h1>Магазин продуктів</h1>
+
+  <h2>Додати продукт</h2>
+  <label>Назва: <input type="text" id="productName"></label>
+  <label>Ціна: <input type="number" id="productPrice"></label>
+  <label>Кількість: <input type="number" id="productQuantity"></label>
+  <button id="addProduct">Додати продукт</button>
+
+  <h2>Видалити продукт</h2>
+  <label>ID продукту: <input type="text" id="productId"></label>
+  <button id="deleteProduct">Видалити продукт</button>
+
+  <h2>Оновити продукт</h2>
+  <label>ID продукту: <input type="text" id="updateId"></label>
+  <label>Нова ціна: <input type="number" id="newPrice"></label>
+  <label>Нова кількість: <input type="number" id="newQuantity"></label>
+  <button id="updateProduct">Оновити продукт</button>
+
+  <h2>Пошук продукту</h2>
+  <label>Назва продукту: <input type="text" id="searchName"></label>
+  <button id="searchProduct">Знайти продукт</button>
+  <div id="searchResult"></div>
+
+  <h2>Зробити замовлення</h2>
+  <label>ID продукту: <input type="text" id="orderId"></label>
+  <label>Кількість: <input type="number" id="orderQuantity"></label>
+  <button id="placeOrder">Замовити</button>
+</div>
+
+<script>
+  function showSelectedTask() {
+    const selectedTask = document.getElementById('taskSelector').value;
+    document.querySelectorAll('.task-section').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(selectedTask).style.display = 'block';
+  }
+</script>
+
+<script src="Task1.js"></script>
+<script src="Task_2.js"></script>
+<script src="Task_3.js"></script>
+<script src="Task_4.js"></script>
+
+</body>
+</html>
